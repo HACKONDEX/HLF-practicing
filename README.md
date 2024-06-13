@@ -32,7 +32,9 @@ Investigating HLF
 
 - `./network.sh createChannel -s couchdb -c channelName` - set up network with channel
 
-- `./network.sh deployCC -ccn sacc -ccp ../sacc -ccl go` - deploy a chain-code
+- `./network.sh up createChannel -ca -c mychannel -s couchdb`
+
+- `./network.sh deployCC -ccn sacc -ccp ../sacc -ccl go -ccv 1` - deploy a chain-code
 
 - `peer lifecycle chaincode queryinstalled` - get deployted on peer smart contracts(chain-codes)
 
@@ -43,6 +45,8 @@ Investigating HLF
 - `docker exec -it ${containerID} env` - see env variables
 
 - `peer chaincode query -C mychannel -n basic -c '{"function": "CreateAsset", "Args": ["assert113", "yellow", "5", "Tom", "1300"]}'`
+
+- `docker rm, docker ps, docker stop`
 
 
 ```
@@ -60,3 +64,5 @@ export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.e
 export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 export CORE_PEER_ADDRESS=localhost:7051
 ```
+
+- `curl -v -d "{}" localhost:3333/securedValue -H "user: Admin@org1.example.com" -H "key: aboba" -H "value: zksnarks"` - test hometask
