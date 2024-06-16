@@ -14,6 +14,8 @@ Investigating HLF
 
 - hlf docks - [https://hyperledger-fabric.readthedocs.io/en/release-2.5](https://hyperledger-fabric.readthedocs.io/en/release-2.5)
 
+- cid package docs - [https://github.com/hyperledger/fabric-chaincode-go/blob/main/pkg/cid/README.md](https://github.com/hyperledger/fabric-chaincode-go/blob/main/pkg/cid/README.md)
+
 #### Start with HLFs
 
 - clone hlf project - `git clone https://github.com/hyperledger/fabric-samples`
